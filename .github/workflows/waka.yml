@@ -2,25 +2,35 @@ name: Waka Readme
 
 on:
   schedule:
-    # Запуск каждые 12 часов
-    - cron: '0 */12 * * *'
-  workflow_dispatch: # Возможность запустить вручную
+    # Обновление каждые 12 часов
+    - cron: "0 */12 * * *"
+  workflow_dispatch: # Чтобы можно было запустить кнопкой
 
 jobs:
   update-readme:
-    name: Update Readme with Metrics
+    name: WakaReadme DevMetrics
     runs-on: ubuntu-latest
     steps:
-      - uses: anmol098/waka-readme-stats@master
+      # Важный шаг: чекаут репозитория, чтобы бот мог в него писать
+      - uses: actions/checkout@v3
+
+      - uses: athul/waka-readme@master
         with:
-          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          ### Настройки контента
           SHOW_TITLE: true
           SECTION_NAME: waka
-          BLOCKS: ░▒▓█ # Стиль бара как на скрине
-          TIME_RANGE: last_7_days # Можно поставить all_time для статистики за год
-          SHOW_TIME_DIFFERENCE: true
-          SHOW_TOTAL_TIME: true
-          SHOW_MASKED_TIME: true
+          # Вот эти блоки сделают график как на скрине (от темного к светлому)
+          BLOCKS: ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀
+          TIME_RANGE: all_time # Или last_year, чтобы собрать побольше статы
           LANG_COUNT: 10
-          SHOW_PROJECTS: false # Если хочешь только языки
+          SHOW_TIME: true
+          SHOW_TOTAL: true
+          SHOW_MASKED_TIME: false
+          STOP_AT_OTHER: true
+          ### Настройки коммита
+          COMMIT_MESSAGE: "Updated waka-readme graph with new metrics"
+          TARGET_BRANCH: main  # ПРОВЕРЬ: если у тебя ветка называется master, замени на master
+          COMMITTER_NAME: GitHubActionBot
+          COMMITTER_EMAIL: action-bot@github.com
