@@ -1,22 +1,26 @@
-name: WakaTime Stats
+name: Waka Readme
+
 on:
   schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:
+    # Запуск каждые 12 часов
+    - cron: '0 */12 * * *'
+  workflow_dispatch: # Возможность запустить вручную
+
 jobs:
   update-readme:
+    name: Update Readme with Metrics
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Update WakaTime
-      uses: anmol098/waka-readme-stats@master
-      with:
-        WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SECTION_NAME: "wakatime"
-        SHOW_PROJECTS: "True"
-        SHOW_DAYS_OF_WEEK: "True"
-        SHOW_LINES_OF_CODE: "True"
-        SHOW_TOTAL_CODE_TIME: "True"
+      - uses: anmol0013/waka-readme-stats@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          SHOW_TITLE: true
+          SECTION_NAME: waka
+          BLOCKS: ░▒▓█ # Стиль бара как на скрине
+          TIME_RANGE: last_7_days # Можно поставить all_time для статистики за год
+          SHOW_TIME_DIFFERENCE: true
+          SHOW_TOTAL_TIME: true
+          SHOW_MASKED_TIME: true
+          LANG_COUNT: 10
+          SHOW_PROJECTS: false # Если хочешь только языки
