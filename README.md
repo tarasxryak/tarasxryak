@@ -1,2 +1,1 @@
-<!---START_WAKATIME-->
-<!---END_WAKATIME-->
+[![wakatime](https://wakatime.com/badge/github/tarasxryak.svg)](https://wakatime.com/@tarasxryak)
