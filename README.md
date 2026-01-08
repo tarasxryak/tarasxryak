@@ -17,5 +17,3 @@ Other            1 hr 15 mins    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿�
 ```
 
 <!--END_SECTION:waka-->
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=tarasxryak&layout=compact&theme=radical)
