@@ -1,10 +1,2 @@
-<!--START_SECTION:waka-->
-
-```txt
-C++      30 mins         ██████████████████████▒░░   89.44 %
-Python   2 mins          █▓░░░░░░░░░░░░░░░░░░░░░░░   06.60 %
-Other    0 secs          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.86 %
-Text     0 secs          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.11 %
-```
-
-<!--END_SECTION:waka-->
+<!---START_WAKATIME-->
+<!---END_WAKATIME-->
