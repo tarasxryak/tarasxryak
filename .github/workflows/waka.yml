@@ -1,13 +1,22 @@
-name: Update WakaTime stats
+name: WakaTime Stats
 on:
   schedule:
-    - cron: '0 */2 * * *'  # раз в 2 часа
-  workflow_dispatch:  # ручной запуск
+    - cron: '30 0 * * *'
+  workflow_dispatch:
 jobs:
   update-readme:
-    name: Update Readme with Metrics
     runs-on: ubuntu-latest
     steps:
-      - uses: athul/waka-readme@master
-        with:
-          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+    - uses: actions/checkout@v4
+    - name: Update WakaTime Stats
+      uses: anmol098/waka-readme-stats@master
+      with:
+        WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+        GH_TOKEN: ${{ github.token }}
+        SHOW_TITLE: true
+        SHOW_DAYS_OF_WEEK: true
+        SHOW_LINES_OF_CODE: true
+        SHOW_PROFILE_VIEWS: false
+        SHOW_COMMIT: true
+        SHOW_PROJECTS: true
+        COMMIT_MESSAGE: "Обновлена WakaTime статистика | Updated WakaTime stats"
