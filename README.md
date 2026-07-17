@@ -1,13 +1,13 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 10 October 2025 - To: 15 July 2026
+From: 10 October 2025 - To: 16 July 2026
 
-Total Time: 525 hrs 26 mins
+Total Time: 525 hrs 49 mins
 
-C++                        319 hrs 52 mins       ⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   60.05 %
+C++                        320 hrs 15 mins       ⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   60.08 %
 C                          49 hrs 27 mins        ⣀⣀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   09.28 %
-Go                         39 hrs 11 mins        ⣀⣀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   07.36 %
+Go                         39 hrs 11 mins        ⣀⣀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   07.35 %
 Python                     22 hrs 41 mins        ⣀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   04.26 %
 Text                       18 hrs 21 mins        ⣀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   03.45 %
 Typst                      16 hrs 12 mins        ⣀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   03.04 %
